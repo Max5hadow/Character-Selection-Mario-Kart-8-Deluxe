@@ -36,7 +36,7 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
   const query = searchInput.value.trim().toLowerCase();
 
-  // Si está vacío, volvemos a mostrar todo
+  // Si está vacío, se vuelve a mostrar todo
   if (query === '') {
     renderCards(currentData);
     return;
@@ -141,7 +141,6 @@ function renderStatsInModal(item) {
   modalContent.innerHTML = `
     <div class="text-center mb-3">
       <img src="${baseImageUrl}${item[imageKey]}" class="img-fluid rounded" alt="${item[nameKey]}" style="max-height: 300px;">
-      <h4 class="mt-3">${item[nameKey]}</h4>
     </div>
     <div class="table-responsive">
       <table class="table table-bordered table-striped">

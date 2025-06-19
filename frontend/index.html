@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Vehicles & Characters Mario Kart 8 Deluxe
-  </title>
+  <title>Vehicles & Characters Mario Kart 8 Deluxe</title>
   <link rel="stylesheet" href="Css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
+
 <body class="p-3">
 
-  <div class="container">
-    <h1 class="text-center"><img src="assets/logo/MarioKartLogo.png" alt="MarioKart8DeluxeLogo" style="height: 200px;"></h1>
-  </div>
+  <header>
+    <!-- Logo Mario Kart -->
+    <div class="container">
+      <h1 class="text-center">
+        <img src="assets/logo/MarioKartLogo.png" alt="MarioKart8DeluxeLogo" style="height: 200px;">
+      </h1>
+    </div>
+  </header>
+  <!-- Barra de navegación y filtros -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!-- Cuatro botones -->
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Characters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vehicles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Wheels</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Glider</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Characters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vehicles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wheels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Glider</a>
+          </li>
+        </ul>
+        <!-- Barra para buscar por nombre -->
+        <form id="searchForm" class="d-flex" role="search">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-      <!-- Barra para filtrar y botón buscar -->
-      <form id="searchForm" class="d-flex" role="search">
-        <input
-          id="searchInput"
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<div class="container mt-4" id="results"></div>
-<div class="modal fade bg-black bg-opacity-75" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="detailsModalLabel">Detalles</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body" id="modalContent">
-      </div>
-    </div>
-  </div>
-</div>
+  <main>
+    <!-- Area donde aparecen las cards-->
+    <container class="container mt-4" id="results"></container>
+
+    <!-- Modal que muestra las stats del personaje o parte de vehículo -->
+    <container class="modal fade bg-black bg-opacity-75" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel"
+      aria-hidden="true">
+      <article class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h5 class="modal-title" id="detailsModalLabel">Detalles</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </header>
+          <div class="modal-body" id="modalContent"></div>
+        </div>
+      </article>
+    </container>
+  </main>
+  <!-- js y boostrap -->
   <script src="Js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

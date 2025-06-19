@@ -1,3 +1,4 @@
+/*Ajustes para el fondo de la página*/
 body::before {
     content: "";
     position: fixed;
@@ -11,6 +12,7 @@ body::before {
     filter: blur(3px) brightness(0.5);
     z-index: -1;
 }
+/*Fuente*/
 :root {
     --bs-body-font-family: 'Comic Neue', cursive, sans-serif;
   }
