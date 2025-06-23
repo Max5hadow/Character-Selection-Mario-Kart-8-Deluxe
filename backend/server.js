@@ -39,7 +39,7 @@ app.get('/characters', async (req, res) => {
         c.character_invincibility,
 
         s.id_skin,
-        s.model AS skin_model        -- aquí está la ruta/imagen
+        s.model AS skin_model
       FROM CharacterMK AS c
       LEFT JOIN Skin   AS s ON c.id_skin = s.id_skin
     `;
